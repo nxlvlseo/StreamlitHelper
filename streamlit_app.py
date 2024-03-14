@@ -3,7 +3,7 @@ import openai
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-def get_gpt_response(user_input):
+def get_gpt_response(prompt):
     try:
         response = openai.ChatCompletion.create(
           model="Streamlit",  # Adjust according to the available models
@@ -15,7 +15,7 @@ def get_gpt_response(user_input):
         return ""
 
 st.title('Custom GPT with Streamlit')
-user_input = st.text_input("Ask something:", "")
+prompt = st.text_input("Ask something:", "")
 if st.button('Submit'):
-    response = get_gpt_response(user_input)
+    response = get_gpt_response(prompt)
     st.text_area("GPT's response:", value=response, height=200)
