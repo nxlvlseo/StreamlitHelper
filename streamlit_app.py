@@ -1,11 +1,11 @@
 import streamlit as st
 import openai
 
-openai.api_key = 'your_openai_api_key_here'
+openai.api_key = st.secrets["secrets"]["OPENAI_API_KEY"]
 
 def get_gpt_response(prompt):
     response = openai.Completion.create(
-      engine="your_custom_gpt_model_name",
+      engine="Streamlit",
       prompt=prompt,
       temperature=0.7,
       max_tokens=150,
