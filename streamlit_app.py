@@ -1,7 +1,7 @@
 import streamlit as st
 import openai
 
-openai.api_key = st.secrets["secrets"]["OPENAI_API_KEY"]
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 def get_gpt_response(prompt):
     response = openai.Completion.create(
