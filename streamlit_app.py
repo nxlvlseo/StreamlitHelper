@@ -6,7 +6,7 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 def get_gpt_response(prompt):
     try:
         response = openai.ChatCompletion.create(
-          model="Streamlit",  # Adjust according to the available models
+          model="gpt-4",  # Adjust according to the available models
           messages=[{"role": "system", "content": prompt}]
         )
         return response['choices'][0]['message']['content']
