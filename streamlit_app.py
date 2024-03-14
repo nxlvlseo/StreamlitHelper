@@ -3,7 +3,7 @@ import openai
 
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-def generate_script(prompt):
+def get_gpt_response(user_input):
     try:
         response = openai.ChatCompletion.create(
           model="Streamlit",  # Adjust according to the available models
