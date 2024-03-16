@@ -14,7 +14,7 @@ def get_gpt_response(prompt):
         st.error(f"An error occurred while generating the script: {e}")
         return ""
 
-st.title('Custom GPT with Streamlit')
+st.title('Kenio's Helper')
 prompt = st.text_input("Ask something:", "")
 if st.button('Submit'):
     response = get_gpt_response(prompt)
