@@ -14,7 +14,7 @@ def get_gpt_response(prompt):
         st.error(f"An error occurred while generating the script: {e}")
         return ""
 
-st.title('Kenio's Helper')
+st.title('Kenio Helper')
 prompt = st.text_input("Ask something:", "")
 if st.button('Submit'):
     response = get_gpt_response(prompt)
